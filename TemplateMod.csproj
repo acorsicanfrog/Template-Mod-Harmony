@@ -1,0 +1,73 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <!-- Target .NET Framework version used by Unity -->
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <OutputPath>output\</OutputPath>
+  </PropertyGroup>
+
+<!-- Disables the debug .pdb file when exporting your mod -->
+  <PropertyGroup>
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+
+  <ItemGroup>
+
+      <!-- Harmony library (patching API) -->
+    <Reference Include="0Harmony">
+      <Private>false</Private>
+    </Reference>
+
+      <!-- Game's main assembly -->
+    <Reference Include="Assembly-CSharp">
+      <Private>false</Private>
+    </Reference>
+
+      <!-- Library used to handle JSON serialization -->
+    <Reference Include="Newtonsoft.Json">
+      <Private>false</Private>
+    </Reference>
+
+      <!-- Base Unity engine assembly -->
+    <Reference Include="UnityEngine">
+      <Private>false</Private>
+    </Reference>
+
+      <!-- Unity core functionalities -->
+    <Reference Include="UnityEngine.CoreModule">
+      <Private>false</Private>
+    </Reference>
+
+      <!-- Unity UI system, to interact with anything UI-related -->
+    <Reference Include="UnityEngine.UI">
+      <Private>false</Private>
+    </Reference>         
+    
+     <!-- Extra Unity UI system, to interact with Canvases etc -->
+    <Reference Include="UnityEngine.UIModule">
+      <Private>false</Private>
+    </Reference>      
+    
+    <!-- Unity Image Conversion module, used to perform operations on textures -->
+    <Reference Include="UnityEngine.ImageConversionModule">
+      <Private>false</Private>
+    </Reference>    
+    
+    <!-- Unity Audio module, used to handle audio clips or audio sources (Musics, SFXs...) -->
+    <Reference Include="UnityEngine.AudioModule">
+      <Private>false</Private>
+    </Reference>
+
+      <!-- TextMeshPro UI text rendering, to interact with the text elements -->
+    <Reference Include="Unity.TextMeshPro">
+      <Private>false</Private>
+    </Reference>      
+    
+    <!-- Extra tools for text objects -->
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <Private>false</Private>
+    </Reference>
+
+  </ItemGroup>
+
+</Project>
