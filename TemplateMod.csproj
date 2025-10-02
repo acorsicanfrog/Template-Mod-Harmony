@@ -1,24 +1,24 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-    <!-- Target .NET Framework version used by Unity -->
+  <!-- Target .NET Framework version used by Unity -->
   <PropertyGroup>
     <TargetFramework>net48</TargetFramework>
     <OutputPath>output\</OutputPath>
   </PropertyGroup>
 
-<!-- Disables the debug .pdb file when exporting your mod -->
+  <!-- Disables the debug .pdb file when exporting your mod -->
   <PropertyGroup>
     <DebugType>none</DebugType>
   </PropertyGroup>
 
   <ItemGroup>
 
-      <!-- Harmony library (patching API) -->
+    <!-- Harmony library (patching API) -->
     <Reference Include="0Harmony">
       <Private>false</Private>
     </Reference>
 
-      <!-- Game's main assembly -->
+    <!-- Game's main assembly -->
     <Reference Include="Assembly-CSharp">
       <Private>false</Private>
     </Reference>
@@ -28,22 +28,22 @@
       <Private>false</Private>
     </Reference>
 
-      <!-- Base Unity engine assembly -->
+    <!-- Base Unity engine assembly -->
     <Reference Include="UnityEngine">
       <Private>false</Private>
     </Reference>
 
-      <!-- Unity core functionalities -->
+    <!-- Unity core functionalities -->
     <Reference Include="UnityEngine.CoreModule">
       <Private>false</Private>
     </Reference>
 
-      <!-- Unity UI system, to interact with anything UI-related -->
+    <!-- Unity UI system, to interact with anything UI-related -->
     <Reference Include="UnityEngine.UI">
       <Private>false</Private>
     </Reference>         
     
-     <!-- Extra Unity UI system, to interact with Canvases etc -->
+    <!-- Extra Unity UI system, to interact with Canvases etc -->
     <Reference Include="UnityEngine.UIModule">
       <Private>false</Private>
     </Reference>      
@@ -58,7 +58,7 @@
       <Private>false</Private>
     </Reference>
 
-      <!-- TextMeshPro UI text rendering, to interact with the text elements -->
+    <!-- TextMeshPro UI text rendering, to interact with the text elements -->
     <Reference Include="Unity.TextMeshPro">
       <Private>false</Private>
     </Reference>      
@@ -68,8 +68,13 @@
       <Private>false</Private>
     </Reference>
 
-        <!-- Used for multiplayer commands -->
+    <!-- Used for multiplayer commands -->
     <Reference Include="PhotonUnityNetworking">
+      <Private>false</Private>
+    </Reference>
+
+    <!-- Used for blurred background UI images (to match the game's 'modern' UI style) -->
+    <Reference Include="TranslucentImage">
       <Private>false</Private>
     </Reference>
 
