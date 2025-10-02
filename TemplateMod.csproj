@@ -68,6 +68,11 @@
       <Private>false</Private>
     </Reference>
 
+        <!-- Used for multiplayer commands -->
+    <Reference Include="PhotonUnityNetworking">
+      <Private>false</Private>
+    </Reference>
+
   </ItemGroup>
 
 </Project>
