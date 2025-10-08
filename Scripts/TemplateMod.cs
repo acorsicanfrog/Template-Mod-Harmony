@@ -1,5 +1,4 @@
 ﻿using HarmonyLib;
-using UnityEngine;
 
 class ExampleMod : GameModification
 {
@@ -7,30 +6,30 @@ class ExampleMod : GameModification
 
     public ExampleMod(Mod p_mod) : base(p_mod)
     {
-        Debug.Log($"[MOD:{p_mod.name}] Registering...");
+        p_mod.Log("Registering...");
     }
 
     public override void OnModInitialization(Mod p_mod)
     {
-        Debug.Log($"[MOD:{p_mod.name}] Initializing...");
-
         mod = p_mod;
+
+        mod.Log("Initializing...");
 
         PatchGame();
     }
 
     public override void OnModUnloaded()
     {
-        Debug.Log($"[MOD:{mod.name}] Unloading...");
+        mod.Log("Unloading...");
 
         _harmony?.UnpatchAll(_harmony.Id);
     }
 
     void PatchGame()
     {
-        Debug.Log($"[MOD:{mod.name}] Applying Patches...");
+        mod.Log("Patching...");
 
-        _harmony = new Harmony("com.hexofsteel." + mod.name);
+        _harmony = new Harmony("com.hexofsteel." + mod.Name);
         _harmony.PatchAll();
     }
 }
