@@ -1,6 +1,4 @@
-﻿using HarmonyLib;
-
-class ExampleMod : GameModification
+﻿class ExampleMod : GameModification
 {
     Harmony _harmony;
 
